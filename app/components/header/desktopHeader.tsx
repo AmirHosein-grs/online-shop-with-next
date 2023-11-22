@@ -56,7 +56,7 @@ export default function DesktopHeader() {
         </div>
       </div>
       <nav>
-        <div className="flex py-8 px-5 border-b-2 justify-between text-xs">
+        <div className="flex py-4 px-5 border-b-2 justify-between text-xs">
           <div className="flex">
             <div className="flex items-center   ">
               <div>

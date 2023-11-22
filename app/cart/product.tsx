@@ -13,8 +13,8 @@ import {
 export default function Product() {
   return (
     <>
-      <div className="grid  grid-cols-2 py-4 mx-5 lg:pr-4 gap-x-4 gap-y-3 ">
-        <div className=" flex items-center">
+      <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:sm:grid-cols-5 lg:grid-cols-6 py-4 pb-8 mx-5 lg:pr-4 gap-x-8 gap-y-4 border-b-[1px] lg:last:border-0 ">
+        <div className=" flex items-center justify-center max-w-[116px] col-span-1 md:grid-cols-2 lg:col-span-1">
           <Link href={"#"}>
             <div>
               <Image
@@ -27,22 +27,22 @@ export default function Product() {
             </div>
           </Link>
         </div>
-        <div className="overflow-hidden">
+        <div className="overflow-hidden lg:col-span-5 md:grid-cols-3 sm:col-span-3 xs:col-span-2 col-span-1">
           <div>
-            <h3 className="text-xs font-bold ">
+            <h4 className="text-xs lg:text-sm font-bold ">
               ست ماشین اصلاح موی صورت و بدن وی جی آر مدل V-099
-            </h3>
+            </h4>
             <div className="flex items-center pt-3">
               <div className="flex mt-1">
                 <div className="bg-black rounded-full w-5 h-5"></div>
               </div>
-              <p className="mr-2 text-xs opacity-70">مشکی</p>
+              <p className="mr-2 text-xs lg:text-sm opacity-70">مشکی</p>
             </div>
             <div className="flex  pt-2 opacity-70">
               <div>
                 <InformationCircleIcon className="w-5 h-5  " />
               </div>
-              <p className="mr-2 text-xs">
+              <p className="mr-2 text-xs lg:text-sm">
                 سرویس ویژه دیجی کالا: 7 روز تضمین بازگشت کالا
               </p>
             </div>
@@ -50,17 +50,17 @@ export default function Product() {
               <div>
                 <BuildingStorefrontIcon className="w-5 h-5  " />
               </div>
-              <p className="mr-2 text-xs">عسلویه شاپ</p>
+              <p className="mr-2 text-xs lg:text-sm">عسلویه شاپ</p>
             </div>
             <div className="flex pt-2 opacity-70">
               <div>
                 <ArchiveBoxArrowDownIcon className="w-5 h-5  " />
               </div>
-              <p className="mr-2 text-xs">موجود در انبار فروشنده</p>
+              <p className="mr-2 text-xs lg:text-sm">موجود در انبار فروشنده</p>
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center max-w-[110px] col-span-1 md:grid-cols-2 lg:col-span-1">
           <div className="flex items-center justify-between w-full p-2 rounded-md border-2 ">
             <div className="flex cursor-pointer">
               <PlusIcon className="w-5 h-5" />
@@ -73,11 +73,11 @@ export default function Product() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="lg:col-span-5 md:grid-cols-3 sm:col-span-3 xs:col-span-2 col-span-1">
           <div className="flex items-center justify-between">
             <div>
               <div className="flex p-1">
-                <span className="text-xs font-bold">535,000</span>
+                <span className="text-xs lg:text-lg font-bold">535,000</span>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <div className="flex mr-1">
@@ -96,7 +96,6 @@ export default function Product() {
           </div>
         </div>
       </div>
-      <hr className="my-2 border-gray-300" />
     </>
   );
 }
