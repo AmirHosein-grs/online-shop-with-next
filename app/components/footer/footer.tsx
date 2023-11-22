@@ -8,8 +8,9 @@ export default function Footer() {
     <>
       <footer>
         <MobileFooter />
-        <div className="hidden lg:flex lg:flex-col mx-8 ">
-          <div className="flex w-full justify-between items-center p-3 pt-8 mt-12 border-t-2 ">
+        <div className="hidden lg:flex lg:flex-col">
+          <hr className="my-2 border-gray-300" />
+          <div className="flex w-full justify-between items-center p-3 pt-6 mt-6 mx-8">
             <div className="flex w-full justify-between">
               <div className="">
                 <Image
@@ -32,14 +33,14 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex text-sm opacity-60 items-center">
+          <div className="flex text-sm opacity-60 items-center mx-8">
             <p>تلفن پشتیبانی ۶۱۹۳۰۰۰۰ - ۰۲۱</p>
             <div>
               <span className="bg-neutral-500 mx-5 block w-[1px] h-4 "></span>
             </div>
             <p>۷ روز هفته، ۲۴ ساعته پاسخگوی شما هستیم</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mx-8">
             <div className="mt-12 items-center justify-between hidden text-xs lg:flex w-5/6">
               <Link href={"/"}>
                 <div className=" flex flex-col items-center">
@@ -114,7 +115,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="w-full py-5">
-            <div className="flex justify-between w-full">
+            <div className="flex justify-between w-full px-8 pt-8">
               <div className=" w-6/12 ">
                 <h2 className="mb-6 text-lg font-semibold text-gray-900 uppercase dark:text-gray-900">
                   با دیجی‌کالا

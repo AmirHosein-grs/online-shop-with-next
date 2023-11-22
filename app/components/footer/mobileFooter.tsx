@@ -28,7 +28,7 @@ export default function MobileFooter() {
             </p>
           </Link>{" "}
           <Link
-            href={"/"}
+            href={"/cart"}
             className="flex-col w-1/4 items-center justify-center m-auto"
           >
             <ShoppingCartIcon className=" w-7 h-7 opacity-40 m-auto -scale-x-100" />
