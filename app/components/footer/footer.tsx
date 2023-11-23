@@ -10,7 +10,7 @@ export default function Footer() {
         <MobileFooter />
         <div className="hidden lg:flex lg:flex-col">
           <hr className="my-2 border-gray-300" />
-          {/* <div className="flex w-full justify-between items-center p-3 pt-6 mt-6 mx-8">
+          <div className="flex w-full justify-between items-center pt-6 mt-6 px-8">
             <div className="flex w-full justify-between">
               <div className="">
                 <Image
@@ -32,7 +32,7 @@ export default function Footer() {
                 </button>
               </div>
             </div>
-          </div> */}
+          </div>
           <div className="flex text-sm opacity-60 items-center mx-8">
             <p>تلفن پشتیبانی ۶۱۹۳۰۰۰۰ - ۰۲۱</p>
             <div>
