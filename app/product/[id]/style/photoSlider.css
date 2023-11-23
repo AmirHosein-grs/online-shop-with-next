@@ -1,0 +1,9 @@
+.swiper-pagination-bullet-active-main {
+  background-color: #000 !important;
+}
+.swiper-horizontal
+  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynami {
+  left: 15% !important;
+  bottom: 0% !important;
+}
