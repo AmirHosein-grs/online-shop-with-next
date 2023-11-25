@@ -1,10 +1,8 @@
-import {
-  HomeIcon,
-  RectangleGroupIcon,
-  ShoppingCartIcon,
-  UserIcon,
-} from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { FiShoppingCart } from "react-icons/fi";
+import { RiHome2Line } from "react-icons/ri";
+import { BiCategory } from "react-icons/bi";
+import { MdOutlinePerson } from "react-icons/md";
 
 export default function MobileFooter() {
   return (
@@ -15,14 +13,14 @@ export default function MobileFooter() {
             href={"/"}
             className="flex-col w-1/4 items-center justify-center m-auto"
           >
-            <HomeIcon className=" w-7 h-7 opacity-40 m-auto" />
+            <RiHome2Line className=" w-6 h-6 opacity-40 m-auto" />
             <p className=" text-neutral-500 text-[10px] text-center ">خانه</p>
           </Link>
           <Link
             href={"/"}
             className="flex-col w-1/4 items-center justify-center m-auto"
           >
-            <RectangleGroupIcon className=" w-7 h-7 opacity-40 m-auto" />
+            <BiCategory className=" w-6 h-6 opacity-40 m-auto" />
             <p className=" text-neutral-500 text-[10px] text-center">
               دسته‌بندی
             </p>
@@ -31,7 +29,7 @@ export default function MobileFooter() {
             href={"/cart"}
             className="flex-col w-1/4 items-center justify-center m-auto"
           >
-            <ShoppingCartIcon className=" w-7 h-7 opacity-40 m-auto -scale-x-100" />
+            <FiShoppingCart className=" w-6 h-6 opacity-40 m-auto -scale-x-100" />
             <p className=" text-neutral-500 text-[10px] text-center">
               سبد خرید
             </p>
@@ -40,7 +38,7 @@ export default function MobileFooter() {
             href={"/"}
             className="flex-col w-1/4 items-center justify-center m-auto"
           >
-            <UserIcon className=" w-7 h-7 opacity-40 m-auto" />
+            <MdOutlinePerson className=" w-7 h-7 opacity-40 m-auto" />
             <p className=" text-neutral-500 text-[10px] text-center">
               دیجی‌کالای من
             </p>

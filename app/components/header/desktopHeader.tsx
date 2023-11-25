@@ -1,5 +1,4 @@
 import Image from "next/image";
-import MobileHeader from "./mobileHeader";
 import {
   ArrowRightOnRectangleIcon,
   BanknotesIcon,
@@ -11,7 +10,7 @@ import {
   ReceiptPercentIcon,
   TruckIcon,
 } from "@heroicons/react/24/outline";
-import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+import { FiShoppingCart } from "react-icons/fi";
 import Link from "next/link";
 
 export default function DesktopHeader() {
@@ -50,7 +49,7 @@ export default function DesktopHeader() {
           <span className="bg-neutral-200 mx-3 block w-[1px] h-6 "></span>
           <div>
             <Link href={"/cart"}>
-              <ShoppingCartIcon className=" w-6 h-6 -scale-x-100" />
+              <FiShoppingCart className=" w-5 h-5 -scale-x-100" />
             </Link>
           </div>
         </div>

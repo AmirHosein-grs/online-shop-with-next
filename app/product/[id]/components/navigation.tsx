@@ -1,15 +1,13 @@
 import Link from "next/link";
 
-import {
-  BellAlertIcon,
-  BuildingStorefrontIcon,
-} from "@heroicons/react/24/outline";
+import { BuildingStorefrontIcon } from "@heroicons/react/24/outline";
 import SwiperNavigation from "./swiperNavigation";
+import { LiaBullhornSolid } from "react-icons/lia";
 
 export default function Navigation() {
   return (
-    <div className="flex items-center">
-      <nav className="py-2 mx-5 lg:px-0 w-full">
+    <div className="  flex mx-5  items-center">
+      <nav className="py-2  lg:px-0 w-full">
         <SwiperNavigation />
       </nav>
       <div className="hidden lg:flex items-center mr-auto py-2 text-sm">
@@ -20,7 +18,7 @@ export default function Navigation() {
           >
             <span>ثبت آگهی در پیندو</span>
             <div className="mr-1">
-              <BellAlertIcon className="w-4 h-4" />
+              <LiaBullhornSolid className="w-4 h-4" />
             </div>
           </Link>
         </div>
