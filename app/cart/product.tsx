@@ -1,10 +1,8 @@
 import Image from "next/image";
-import EmptyList from "./emptyList";
 import Link from "next/link";
 import {
   ArchiveBoxArrowDownIcon,
   BuildingStorefrontIcon,
-  EllipsisVerticalIcon,
   InformationCircleIcon,
   PlusIcon,
   TrashIcon,

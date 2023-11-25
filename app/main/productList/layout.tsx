@@ -1,6 +1,6 @@
 import Footer from "@/app/components/footer/footer";
-import DesktopHeader from "@/app/components/header/desktopHeader";
 import { Metadata } from "next";
+import ProductListHeader from "./components/productListHeader";
 
 export const metadata: Metadata = {
   title: "دیجی کالا | لیست محصولات",
@@ -14,7 +14,7 @@ export default function ProductListLayout({
 }) {
   return (
     <>
-      <DesktopHeader />
+      <ProductListHeader />
       {children}
       <Footer />
     </>

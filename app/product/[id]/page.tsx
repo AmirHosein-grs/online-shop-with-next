@@ -1,5 +1,5 @@
 import DesktopHeader from "@/app/components/header/desktopHeader";
-import Navigation from "./components/navigation";
+import Navigation from "../../components/shared/navigation";
 import ProductHeader from "./components/productHeader";
 import PhotoSlider from "./components/photoSlider";
 import ProductSection from "./components/productSection";
