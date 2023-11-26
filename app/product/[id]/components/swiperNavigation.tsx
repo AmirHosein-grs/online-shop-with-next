@@ -14,10 +14,6 @@ export default function SwiperNavigation() {
             <span className="mx-3">/</span>
           </Link>
         </SwiperSlide>
-        <SwiperSlide style={{ width: "auto" }}>
-          {" "}
-          <Link href={"/"}>پوشاک</Link>
-        </SwiperSlide>
       </Swiper>
     </div>
   );

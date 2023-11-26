@@ -57,12 +57,14 @@ export default function DesktopHeader() {
       <nav>
         <div className="flex py-4 px-5 border-b-2 justify-between text-xs">
           <div className="flex">
-            <div className="flex items-center   ">
-              <div>
-                <Bars3Icon className="w-5 h-5 ml-1 " />
+            <Link href={"/main/productList"}>
+              <div className="flex items-center   ">
+                <div>
+                  <Bars3Icon className="w-5 h-5 ml-1 " />
+                </div>
+                <div className="text-sm">لیست محصولات</div>
               </div>
-              <div className="text-sm">دسته‌بندی کالاها</div>
-            </div>
+            </Link>
             <span className="bg-neutral-200 mx-3 block w-[1px] h-6 "></span>
             <div className="flex ">
               <div className="flex items-center ml-6">

@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { CiCircleInfo } from "react-icons/ci";
 
-export default function AddToCart() {
+interface AddToCartProps {
+  price: any;
+}
+
+export default function AddToCart({ price }: AddToCartProps) {
   return (
     <div className=" fixed right-0 bottom-0 w-full bg-white lg:bg-inherit lg:relative  lg:mb-0 pb-5 lg:px-0 px-5 pt-5 lg:border-0 border-t-4">
       <div className="flex lg:flex-col-reverse flex-row justify-between items-center">
@@ -15,7 +19,9 @@ export default function AddToCart() {
         </div>
         <div className="flex flex-col lg:flex-row-reverse justify-between  mr-4 lg:mt-5 lg:w-full lg:px-2">
           <div className="flex justify-start lg:justify-end items-center">
-            <div className="ml-1 lg:text-lg text:xs font-bold">535,000</div>
+            <div className="ml-1 lg:text-lg text:xs font-bold">
+              {price?.sale_price}
+            </div>
             <div>
               <Image
                 src="/Toman/Toman.svg"

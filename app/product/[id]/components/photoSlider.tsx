@@ -6,7 +6,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "../style/photoSlider.css";
 
-export default function PhotoSlider() {
+interface PhotoSliderProps {
+  images: any;
+}
+
+export default function PhotoSlider({ images }: PhotoSliderProps) {
   return (
     <div>
       <div>
@@ -19,39 +23,19 @@ export default function PhotoSlider() {
             slidesPerView={"auto"}
             className="text-xs lg:my-4 w-full h-[336px] flex items-center justify-center "
           >
-            <SwiperSlide>
-              <div className="flex h-full w-full items-center justify-center">
-                <Image
-                  src="/Test/1.jpg"
-                  alt="Shop Logo"
-                  width={280}
-                  height={336}
-                  priority
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex h-full w-full items-center justify-center">
-                <Image
-                  src="/Test/2.jpg"
-                  alt="Shop Logo"
-                  width={280}
-                  height={280}
-                  priority
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="flex h-full w-full items-center justify-center">
-                <Image
-                  src="/Test/3.jpg"
-                  alt="Shop Logo"
-                  width={280}
-                  height={280}
-                  priority
-                />
-              </div>
-            </SwiperSlide>
+            {images.map((image: any) => (
+              <SwiperSlide key={image.id}>
+                <div className="flex h-full w-full items-center justify-center">
+                  <Image
+                    src={image.path}
+                    alt="Shop Logo"
+                    width={280}
+                    height={336}
+                    priority
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

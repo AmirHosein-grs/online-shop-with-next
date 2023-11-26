@@ -1,16 +1,17 @@
+import product from "@/app/models/product";
 import Image from "next/image";
 import Link from "next/link";
 
 interface ProductProps {
-  index: number;
+  product: product;
 }
 
-export default function Product({ index }: ProductProps) {
+export default function Product({ product }: ProductProps) {
   return (
     <>
       <div className="border-b-[1px] sm:border hover:shadow-xl ">
         <Link
-          href={"#"}
+          href={`/product/${product.id}`}
           className="py-2 bg-white overflow-hidden justify-start items-stretch cursor-pointer relative"
         >
           <div>
@@ -22,7 +23,7 @@ export default function Product({ index }: ProductProps) {
                       <div className=" w-32 h-32 flex items-center relative justify-center sm:w-60 sm:h-60 ">
                         <picture>
                           <Image
-                            src="/Test/2.jpg"
+                            src={product?.cover}
                             alt="Shop Logo"
                             fill={true}
                             priority
@@ -40,23 +41,27 @@ export default function Product({ index }: ProductProps) {
                   </div>
                   <div className="py-2">
                     <h3 className="text-neutral-700 font-bold ">
-                      تی شرت کلاه دار مردانه مدل 00140204 رنگ سرمه ای
+                      {product?.name}
                     </h3>
                   </div>
-                  <div className="mb-1 flex items-center justify-between">
-                    <div className="flex items-center">
-                      <p className=" text-red-500">
-                        تنها ۱ عدد در انبار باقی مانده
-                      </p>
+                  {product.existing_number === 1 && (
+                    <div className="mb-1 flex items-center justify-between">
+                      <div className="flex items-center">
+                        <p className=" text-red-500">
+                          تنها ۱ عدد در انبار باقی مانده
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  )}
                   <div className="pt-1 flex flex-col items-stretch justify-between">
                     <div className="flex items-center justify-between">
                       <div className=" p-[3px] px-[6px] text-white rounded-3xl flex items-center justify-center bg-rose-700">
                         <span>% ۳۰ </span>
                       </div>
                       <div className="flex items-center justify-end gap-1 text-neutral-700 grow">
-                        <span className="text-sm font-bold">۲۰۲,۲۹۰</span>
+                        <span className="text-sm font-bold">
+                          {product?.full_price?.sale_price}
+                        </span>
                         <div className="flex ">
                           <Image
                             src="/Toman/Toman.svg"
@@ -70,7 +75,7 @@ export default function Product({ index }: ProductProps) {
                     </div>
                     <div className="flex items-center justify-between pl-5">
                       <div className="text-neutral-300 line-through self-end mr-auto text-[10px]">
-                        ۲۸۹,۰۰۰
+                        {product?.full_price?.box_price}
                       </div>
                     </div>
                   </div>
