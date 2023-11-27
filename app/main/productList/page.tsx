@@ -2,7 +2,7 @@ import Navigation from "@/app/components/shared/navigation";
 import Product from "./components/product";
 import Filter from "./components/filter";
 import { postData } from "@/app/services/products";
-import product from "@/app/models/product";
+import { product } from "@/app/models/product";
 
 export default async function ProductList() {
   const products = await postData();

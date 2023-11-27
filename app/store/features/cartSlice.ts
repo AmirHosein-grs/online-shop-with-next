@@ -16,7 +16,21 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     setCarts: (state, action: PayloadAction<CartType[]>) => {
-      state.cart = action.payload;
+      // Loop through the products in the payload
+      action.payload.forEach((newProduct) => {
+        // Check if the product is already in the cart
+        const existingProductIndex = state.cart.findIndex(
+          (product) => product.id === newProduct.id
+        );
+
+        // If the product is not in the cart, add it
+        if (existingProductIndex === -1) {
+          state.cart.push(newProduct);
+        } else {
+          // If the product is already in the cart, update its count
+          state.cart[existingProductIndex].count += newProduct.count;
+        }
+      });
     },
     addCount: (state, action: PayloadAction<CartType>) => {
       const existingProduct: any = state.cart.find(
@@ -48,8 +62,12 @@ export const cartSlice = createSlice({
         }
       }
     },
+    clearCart: (state, action: PayloadAction) => {
+      state.cart = [];
+    },
   },
 });
 
-export const { setCarts, addCount, reduceProductCount } = cartSlice.actions;
+export const { setCarts, addCount, reduceProductCount, clearCart } =
+  cartSlice.actions;
 export default cartSlice.reducer;

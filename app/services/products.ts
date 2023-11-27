@@ -54,3 +54,29 @@ export const singleProduct = async (productId: number) => {
     console.error("Unexpected error", error);
   }
 };
+// export const cartProducts = async (productId: number, count: number) => {
+//   try {
+//     const apiUrl = "https://imis.silverage.co/api/shop/cart/details";
+
+//     const requestBody = {
+//       products: [{ id: productId, count: count }],
+//     };
+
+//     const response = await fetch(apiUrl, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(requestBody),
+//     });
+
+//     if (response.ok) {
+//       const data = await response.json();
+//       return data.results.product;
+//     } else {
+//       console.error("Error", response.statusText);
+//     }
+//   } catch (error) {
+//     console.error("Unexpected error", error);
+//   }
+// };

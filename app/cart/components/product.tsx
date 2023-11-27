@@ -7,8 +7,15 @@ import {
   PlusIcon,
   TrashIcon,
 } from "@heroicons/react/24/outline";
+import { CartType } from "@/app/models/product";
+import { cartProducts } from "@/app/helpers/cart";
+// import { cartProducts } from "@/app/services/products";
 
-export default function Product() {
+interface ProductProps {
+  product: CartType;
+}
+
+export default function Product({ product }: ProductProps) {
   return (
     <>
       <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:sm:grid-cols-5 lg:grid-cols-6 py-4 pb-8 mx-5 lg:pr-4 gap-x-8 gap-y-4 border-b-[1px] lg:last:border-0 ">
@@ -16,7 +23,7 @@ export default function Product() {
           <Link href={"#"}>
             <div>
               <Image
-                src="Logo.svg"
+                src={"Logo.svg"}
                 alt="Shop Logo"
                 width={114}
                 height={114}
