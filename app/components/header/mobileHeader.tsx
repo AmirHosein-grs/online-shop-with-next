@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function MobileHeader() {
   return (
-    <div className="sticky top-0 left-0 w-full z-3 bg-neutral-000 lg:hidden">
+    <div className="sticky top-0 left-0 w-full z-3 bg-white lg:hidden">
       <div className="p-2 relative flex items-center z-5 bg-neutral-000 shadow-1-bottom">
         <div className="relative  ml-0 w-full">
           <div className="flex items-center bg-neutral-100 grow rounded-lg px-2 lg:px-4 text-body-2">

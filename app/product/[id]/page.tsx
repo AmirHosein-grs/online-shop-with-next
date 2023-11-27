@@ -45,7 +45,7 @@ export default async function SingleProduct({ params }: any) {
         <div className="lg:ml-4 w-[36%] ml-4">
           <div className="flex flex-col items-center lg:max-w-92 xl:max-w-145 lg:block mb-2">
             <div className="flex">
-              <div className="flex lg:flex-col lg:gap-y-4 lg:pt-9 text-neutral-700 self-end lg:self-start lg:text-neutral-900">
+              <div className="flex lg:flex-col lg:gap-y-4 lg:pt-9 text-neutral-700 self-end lg:self-start ">
                 <div className="z-1 ml-6 lg:ml-4">
                   <div className="flex cursor-pointer">
                     <FaRegHeart className="h-[20px] w-[20px]" />
@@ -91,8 +91,8 @@ export default async function SingleProduct({ params }: any) {
               </h1>
             </div>
           </div>
-          <div className="grid grid-cols-6 mx-1">
-            <div className="col-span-4">
+          <div className="grid grid-cols-8 mx-1">
+            <div className="col-span-5">
               <div className=" pb-3 min-w-0 mx-5 lg:mx-0 lg:pb-3 border-t-[1px]">
                 {product.variety_attributes.map((attribute: any) => (
                   <AttributeSection
@@ -104,7 +104,7 @@ export default async function SingleProduct({ params }: any) {
               <FeatureSection features={product.attributes} />
             </div>
 
-            <div className="col-span-2 p-5 border rounded-xl mr-4 bg-neutral-100">
+            <div className="col-span-3 p-5 border rounded-xl mr-4 bg-neutral-100">
               <div className="">
                 <div className="">
                   <div className="flex items-center pb-4">

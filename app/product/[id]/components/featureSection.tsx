@@ -23,10 +23,10 @@ export default function FeatureSection({ features }: FeatureSectionProps) {
                 className="flex items-start mb-2 lg:mr-2"
               >
                 <div className="flex items-center">
-                  <div className="flex w-3 opacity-50">
+                  <div className="flex w-3 opacity-30">
                     <GoDotFill />
                   </div>
-                  <p className="text-[12px] lg:text-sm mr-1">
+                  <p className="text-[12px] lg:text-sm text-neutral-400 mr-1">
                     {feature.attribute_name} :
                   </p>
                 </div>

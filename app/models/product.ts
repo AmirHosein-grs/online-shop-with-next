@@ -65,7 +65,7 @@ export interface product {
   settlement_type: number;
 }
 
-export interface cartType {
+export interface CartType {
   id: number;
   count: number;
 }

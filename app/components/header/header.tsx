@@ -1,3 +1,4 @@
+import StickyHeader from "./components/stickyHeader";
 import DesktopHeader from "./desktopHeader";
 import MobileHeader from "./mobileHeader";
 
@@ -8,6 +9,8 @@ export default function Header({}: HeaderProps) {
     <>
       <header>
         <MobileHeader />
+        <StickyHeader />
+
         <DesktopHeader />
       </header>
     </>
