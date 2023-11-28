@@ -7,7 +7,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearCart } from "@/app/store/features/cartSlice";
 import { RootState } from "@/app/store/store";
 import EmptyList from "./emptyList";
-export default function MobileCart() {
+
+interface MobileCartProps {
+  productList: any;
+}
+
+export default function MobileCart({ productList }: MobileCartProps) {
   const cart: any = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
 
@@ -27,7 +32,7 @@ export default function MobileCart() {
           </div>
         </div>
       </div>
-      {cart.cart.length === 0 ? (
+      {cart?.cart?.length === 0 ? (
         <div className="lg:hidden pt-10">
           <EmptyList />
         </div>
@@ -50,12 +55,13 @@ export default function MobileCart() {
             </div>
             <div className="lg:flex ld:flex-col">
               <section>
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
+                {productList?.map((product: any, index: any) => (
+                  <Product
+                    key={`key${index + 1}`}
+                    product={product}
+                    cart={cart}
+                  />
+                ))}
               </section>
               <aside className="relative pb-40">
                 <div className="sticky top-44">

@@ -1,11 +1,14 @@
+"use client";
 import DesktopHeader from "@/app/components/header/desktopHeader";
 import {
   ArrowRightIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
 import { IoMdShare } from "react-icons/io";
 
 export default function ProductListHeader() {
+  const router = useRouter();
   return (
     <>
       <DesktopHeader />
@@ -16,10 +19,15 @@ export default function ProductListHeader() {
               <div className="flex items-center p-2 w-full justify-between">
                 <div className="flex">
                   <div className="flex cursor-pointer ml-5">
-                    <ArrowRightIcon className="w-5 h-5 " />
+                    <ArrowRightIcon
+                      className="w-5 h-5 "
+                      onClick={() => {
+                        router.back();
+                      }}
+                    />
                   </div>
                   <div>
-                    <span>مردانه</span>
+                    <span>لیست محصولات</span>
                   </div>
                 </div>
                 <div className="flex justify-between">

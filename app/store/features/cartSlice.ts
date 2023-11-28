@@ -5,10 +5,12 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export interface CartState {
   cart: CartType[];
+  count: number;
 }
 
 const initialState: CartState = {
   cart: [],
+  count: 0,
 };
 
 export const cartSlice = createSlice({
@@ -65,9 +67,12 @@ export const cartSlice = createSlice({
     clearCart: (state, action: PayloadAction) => {
       state.cart = [];
     },
+    setCount: (state, action: PayloadAction<number>) => {
+      state.count = action.payload;
+    },
   },
 });
 
-export const { setCarts, addCount, reduceProductCount, clearCart } =
+export const { setCarts, addCount, reduceProductCount, clearCart, setCount } =
   cartSlice.actions;
 export default cartSlice.reducer;

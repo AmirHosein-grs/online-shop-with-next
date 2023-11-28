@@ -1,3 +1,4 @@
+"use client";
 import {
   ArrowRightIcon,
   EllipsisVerticalIcon,
@@ -5,8 +6,10 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function ProductHeader() {
+  const router = useRouter();
   return (
     <div className="sticky top-0 left-0 w-full z-10 bg-white lg:hidden">
       <div className="p-2 relative flex items-center z-5 bg-white shadow-1-bottom">
@@ -15,7 +18,10 @@ export default function ProductHeader() {
             <div className="flex items-center p-2 w-full justify-between">
               <div className="flex">
                 <div className="flex cursor-pointer ml-2">
-                  <ArrowRightIcon className="w-5 h-5 " />
+                  <ArrowRightIcon
+                    className="w-5 h-5 "
+                    onClick={() => router.back()}
+                  />
                 </div>
                 <div>
                   <Image
@@ -29,7 +35,10 @@ export default function ProductHeader() {
               </div>
               <div className="flex justify-between">
                 <div className="flex cursor-pointer ml-5">
-                  <ShoppingCartIcon className="w-6 h-6 -scale-x-100" />
+                  <ShoppingCartIcon
+                    className="w-6 h-6 -scale-x-100"
+                    onClick={() => router.push("/cart")}
+                  />
                 </div>
                 <div className="ml-5">
                   <HeartIcon className="w-6 h-6 " />

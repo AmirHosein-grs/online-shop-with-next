@@ -69,7 +69,7 @@ export default function Product({ product }: ProductProps) {
                           ""
                         ) : (
                           <span className="text-sm font-bold">
-                            {product?.full_price?.sale_price}
+                            {product?.full_price?.sale_price.toLocaleString()}
                           </span>
                         )}
                         <div className="flex ">
@@ -88,7 +88,7 @@ export default function Product({ product }: ProductProps) {
                         ""
                       ) : (
                         <div className="text-neutral-300 line-through self-end mr-auto text-[10px]">
-                          {product?.full_price?.box_price}
+                          {product?.full_price?.box_price.toLocaleString()}
                         </div>
                       )}
                     </div>

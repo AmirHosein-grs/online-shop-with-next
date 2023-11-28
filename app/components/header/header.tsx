@@ -9,8 +9,6 @@ export default function Header({}: HeaderProps) {
     <>
       <header>
         <MobileHeader />
-        <StickyHeader />
-
         <DesktopHeader />
       </header>
     </>

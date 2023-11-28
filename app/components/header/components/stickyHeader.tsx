@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import {
   ArrowRightOnRectangleIcon,
@@ -5,8 +6,11 @@ import {
 } from "@heroicons/react/24/outline";
 import { FiShoppingCart } from "react-icons/fi";
 import Link from "next/link";
+import { RootState } from "@/app/store/store";
+import { useSelector } from "react-redux";
 
 export default function StickyHeader() {
+  const count: any = useSelector((state: RootState) => state.cart.count);
   return (
     <div className="flex w-full justify-between items-center p-3 ">
       <div className="flex items-center">
@@ -42,6 +46,15 @@ export default function StickyHeader() {
         <div>
           <Link href={"/cart"}>
             <FiShoppingCart className=" w-5 h-5 -scale-x-100" />
+            {count === 0 ? (
+              ""
+            ) : (
+              <div className=" relative">
+                <span className="rounded-md text-white text-center absolute top-[-8px] left-[8px] flex items-center border-[1px] border-neutral-500 justify-center text-sm bg-red-600 w-4 h-4">
+                  <span className="mt-1">{count}</span>
+                </span>
+              </div>
+            )}
           </Link>
         </div>
       </div>

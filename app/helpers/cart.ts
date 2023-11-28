@@ -1,7 +1,7 @@
 import { CartType } from "../models/product";
 
 const cartProducts = async (cart: Array<CartType>) => {
-  await fetch("/api/cartApi", {
+  const res = await fetch("api/cart", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -10,5 +10,7 @@ const cartProducts = async (cart: Array<CartType>) => {
       products: cart,
     }),
   });
+  const results = await res.json();
+  return results;
 };
 export { cartProducts };

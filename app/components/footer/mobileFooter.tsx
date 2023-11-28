@@ -17,7 +17,7 @@ export default function MobileFooter() {
             <p className=" text-neutral-500 text-[10px] text-center ">خانه</p>
           </Link>
           <Link
-            href={"/"}
+            href={"/main/productList"}
             className="flex-col w-1/4 items-center justify-center m-auto"
           >
             <BiCategory className=" w-6 h-6 opacity-40 m-auto" />
