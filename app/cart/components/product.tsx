@@ -16,7 +16,7 @@ export default function Product({ product, cart }: ProductProps) {
   const cost = cart.cart.find(
     (productID: any) => productID.id === product?.product?.id
   );
-  const singleCost = product?.product?.full_price?.sale_price * cost.count;
+  const singleCost = product?.product?.full_price?.sale_price * cost?.count;
   return (
     <>
       <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:sm:grid-cols-5 lg:grid-cols-6 py-4 pb-8 mx-5 lg:pr-4 gap-x-8 gap-y-4 border-b-[1px] lg:last:border-0 ">

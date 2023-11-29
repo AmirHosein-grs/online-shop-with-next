@@ -39,7 +39,7 @@ export default function Cart() {
 
   return (
     <div>
-      <MobileCart productList={productList} />
+      <MobileCart productList={productList} count={count} cost={cost} />
       <>
         <div className="hidden lg:flex flex-col justify-center items-center ">
           <div className="p-5 relative max-w-[1280px] w-full">
